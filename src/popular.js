@@ -22,8 +22,9 @@ class Popular extends Component {
                 <ul className="languages">
                 {languages.map(function(item,index){
                     return(
-                            <li key={index} onClick={this.updateLanguage.bind(null,item)} >
-                                {item}
+                            <li key={index} className="selected" onClick={this.updateLanguage.bind(null,item)} 
+                             style={item === this.state.selectedLanguage ? { color:'red'}:null } >
+                            {item}
                             </li>
                     )
                 },this)
