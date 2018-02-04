@@ -1,7 +1,13 @@
 import React, { Component } from 'react';
 import logo from './logo.svg';
 import './App.css';
-import Popular from './popular'
+import Popular from './Pages/Popular'
+import {BrowserRouter as Router , Route} from 'react-router-dom';
+import NavBar from './NavBar';
+import Home from './Pages/Home';
+import Battle from './Pages/Battle';
+
+
 class App extends Component {
   render() {
     return (
@@ -11,7 +17,15 @@ class App extends Component {
           <h1 className="App-title">Welcome to React</h1>
         </header>
         <div>
-          <Popular/>
+          <Router>
+            <div className="continer">
+              <NavBar/>
+              <Route path='/popular' component={Popular}/>
+              <Route path='/home' component={Home}/>
+              <Route path='/battle' component={Battle}/>
+              <Route exact path='/' component={Home}/>
+            </div>
+          </Router>
         </div>
       </div>
     );
