@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
-import LanguageSelector from '../LanguageSelector';
+import LanguageSelector from '../Components/LanguageSelector';
 import { GithubApiCall } from '../utils/api.js';
-import Repos from '../Repos';
+import Repos from '../Components/Repos';
 class Popular extends Component {
     constructor(props) {
         super(props)

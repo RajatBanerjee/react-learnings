@@ -6,6 +6,7 @@ import {BrowserRouter as Router , Route} from 'react-router-dom';
 import NavBar from './NavBar';
 import Home from './Pages/Home';
 import Battle from './Pages/Battle';
+import Results from './Pages/Results';
 
 
 class App extends Component {
@@ -22,7 +23,8 @@ class App extends Component {
               <NavBar/>
               <Route path='/popular' component={Popular}/>
               <Route path='/home' component={Home}/>
-              <Route path='/battle' component={Battle}/>
+              <Route exact path='/battle' component={Battle}/>
+              <Route path='/battle/results' component={Results}/>
               <Route exact path='/' component={Home}/>
             </div>
           </Router>
