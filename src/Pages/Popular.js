@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import LanguageSelector from '../Components/LanguageSelector';
 import { GithubApiCall } from '../utils/api.js';
 import Repos from '../Components/Repos';
+import Loading from '../Components/Loading';
 class Popular extends Component {
     constructor(props) {
         super(props)
@@ -41,7 +42,12 @@ class Popular extends Component {
         return (
             <div className="popular-container">
                 <LanguageSelector languages={this.languages} updateLanguage={this.updateLanguage} selectedLanguage={this.state.selectedLanguage} />
-                <Repos repos={this.state.repos} />
+                {
+                    !this.state.repos ?
+                    <Loading/>
+                    :
+                    <Repos repos={this.state.repos} />
+                }
             </div>
         );
     }
