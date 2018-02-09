@@ -9,6 +9,7 @@
 - open in browser plugin
 
 Branch : [react16-router4-client](https://github.com/RajatBanerjee/react-learnings/tree/react16-router4-client)
+
 - This project was bootstrapped with [Create React App](https://github.com/facebookincubator/create-react-app).
 
 * client ONLY APP built using just react
@@ -20,4 +21,3 @@ Branch : [react16-router4-client](https://github.com/RajatBanerjee/react-learnin
 * Ternary operators
 * Event handlers
 * Props.Children 
-
